@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FeedPage</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        background-color: #5ba199;
+      }
+
+      .rounded {
+        border-radius: 50px;
+      }
+      .container {
+        display: inline-block;
+        height: 100%;
+        width: 800px;
+        background-color: #ddbeaa;
+        padding: 16px 16px 16px 16px;
+        border-radius: 12px;
+      }
+
+      .userPhotoAvatar {
+        margin: 8px 8px 8px 8px;
+        width: 50px;
+        height: 50px;
+        max-width: 50px;
+      }
+
+      .postContainer {
+        display: grid;
+        gap: 8px;
+      }
+
+      .newPost {
+        display: grid;
+        max-width: 800px;
+        max-height: 200px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        background-color: #bbc6c8;
+        border-radius: 12px;
+        gap: 8px;
+        border: 1px solid gray;
+      }
+
+      .inputTitle {
+        grid-area: 1 / 2 / 1 / -2;
+        background-color: #e5e3e4;
+        height: 40px;
+        width: 710px;
+        border-radius: 12px;
+        margin-top: 8px;
+        border: 1px solid gray;
+      }
+
+      .inputDescription {
+        height: 80px;
+        width: 710px;
+        grid-area: 2 / 2 / 3 / -2;
+        background-color: #e5e3e4;
+        border-radius: 12px;
+        border: 1px solid gray;
+      }
+
+      .postButton {
+        height: 20px;
+        width: 50px;
+        grid-area: 2 / 11 / 2 / 12;
+        margin-top: 50px;
+      }
+
+      button {
+        display: inline;
+        background-color: #bbc6c8;
+        color: black;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .createdPost {
+        display: flex;
+        height: auto;
+        max-width: 800px;
+        background-color: #bbc6c8;
+        flex-wrap: wrap;
+        border-radius: 12px;
+        border: 1px solid gray;
+      }
+
+      .savedTitle {
+        height: auto;
+        max-height: 60px;
+        width: 750px;
+        max-width: 720px;
+        margin: 0px;
+        font-weight: bold;
+      }
+
+      .savedDescription {
+        height: auto;
+        width: 750px;
+        max-width: 750px;
+        margin: 0px 8px 8px 60px;
+      }
+
+      .imageContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        width: 732px;
+        gap: 8px;
+        margin-left: 57px;
+        margin-bottom: 8px;
+      }
+
+      .imageContainer img {
+        border-radius: 12px;
+        min-width: 140px;
+        min-height: 140px;
+        max-width: 140px;
+        max-height: 140px;
+      }
+
+      .imageContainer > :first-child {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      .imageContainer > :second-child {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+
+      .createdPost .userPhotoAvatar {
+        max-width: 50px;
+        margin-right: 0px;
+      }
+
+      .savedTitle p {
+        margin: 8px 0px 0px 4px;
+      }
+
+      .savedDescription p {
+        margin: 8px 8px 0px 0px;
+      }
+
+      .inputTitle p {
+        text-align: left;
+        margin: 8px 0px 6px 8px;
+        color: rgba(190, 188, 188, 0.853);
+      }
+
+      .inputDescription p {
+        text-align: left;
+        margin: 8px 0px 6px 8px;
+        color: rgba(190, 188, 188, 0.853);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="postContainer">
+        <div class="newPost">
+          <div class="userPhotoAvatar">
+            <img
+              src="./mudrik-zb-1-min-1678873694cYyme.jpg"
+              width="40"
+              height="40"
+              class="rounded"
+            />
+          </div>
+          <div class="inputTitle">
+            <p>Type here your title</p>
+          </div>
+          <div class="inputDescription">
+            <p>Type here your description</p>
+          </div>
+          <div class="postButton"><button>Post</button></div>
+        </div>
+        <div class="createdPost">
+          <div class="userPhotoAvatar">
+            <img
+              src="./mudrik-zb-1-min-1678873694cYyme.jpg"
+              width="40"
+              height="40"
+              class="rounded"
+            />
+          </div>
+          <div class="savedTitle">
+            <p>
+                Why Artemis 2 moon launch with astronauts is different from Artemis 1. Crew and experience adds a lot of change to the rocket hardware.
+            </p>
+
+          </div>
+          <div class="savedDescription">
+            <p>
+                Four astronauts will make a trip around the moon in 2024 or so. It's the first lunar trip by humans in half a century, and NASA wants to make sure its rocket is ready.
+
+                The agency's Space Launch System (SLS) rocket tasked with the historic launch has already flown once. It successfully sent Artemis 1, an uncrewed spacecraft with three mannequins on board, around the moon in 2022. Now it has a more sensitive mission of making sure the four Artemis 2 astronauts remain safe on board through the stresses of launch.
+            </p>
+          </div>
+          <div class="imageContainer">
+            <img
+              src="./HD-wallpaper-cute-astronaut-astronaut-beautiful-spacenight-thumbnail.jpg"
+            />
+            <img src="./149607.jpg" />
+            <img src="./164376.jpg" />
+            <img src="./27490-800.jpg" />
+            <img src="./reaVPYbHtVWG8WHFPrgdvB.jpg" />
+          </div>
+        </div>
+        <div class="createdPost">
+          <div class="userPhotoAvatar">
+            <img
+              src="./mudrik-zb-1-min-1678873694cYyme.jpg"
+              width="40"
+              height="40"
+              class="rounded"
+            />
+          </div>
+          <div class="savedTitle">
+            <p>
+                Why Artemis 2 moon launch with astronauts is different from Artemis 1. Crew and experience adds a lot of change to the rocket hardware.
+            </p>
+
+          </div>
+          <div class="savedDescription">
+            <p>
+                Four astronauts will make a trip around the moon in 2024 or so. It's the first lunar trip by humans in half a century, and NASA wants to make sure its rocket is ready.
+
+                The agency's Space Launch System (SLS) rocket tasked with the historic launch has already flown once. It successfully sent Artemis 1, an uncrewed spacecraft with three mannequins on board, around the moon in 2022. Now it has a more sensitive mission of making sure the four Artemis 2 astronauts remain safe on board through the stresses of launch.
+            </p>
+          </div>
+          <div class="imageContainer">
+            <img
+              src="./HD-wallpaper-cute-astronaut-astronaut-beautiful-spacenight-thumbnail.jpg"
+            />
+            <img src="./149607.jpg" />
+            <img src="./164376.jpg" />
+            <img src="./27490-800.jpg" />
+            <img src="./reaVPYbHtVWG8WHFPrgdvB.jpg" />
+          </div>
+        </div>
+        <div class="createdPost">
+          <div class="userPhotoAvatar">
+            <img
+              src="./mudrik-zb-1-min-1678873694cYyme.jpg"
+              width="40"
+              height="40"
+              class="rounded"
+            />
+          </div>
+          <div class="savedTitle">
+            <p>
+                Why Artemis 2 moon launch with astronauts is different from Artemis 1. Crew and experience adds a lot of change to the rocket hardware.
+            </p>
+
+          </div>
+          <div class="savedDescription">
+            <p>
+                Four astronauts will make a trip around the moon in 2024 or so. It's the first lunar trip by humans in half a century, and NASA wants to make sure its rocket is ready.
+
+                The agency's Space Launch System (SLS) rocket tasked with the historic launch has already flown once. It successfully sent Artemis 1, an uncrewed spacecraft with three mannequins on board, around the moon in 2022. Now it has a more sensitive mission of making sure the four Artemis 2 astronauts remain safe on board through the stresses of launch.
+            </p>
+          </div>
+          <div class="imageContainer">
+            <img
+              src="./HD-wallpaper-cute-astronaut-astronaut-beautiful-spacenight-thumbnail.jpg"
+            />
+            <img src="./149607.jpg" />
+            <img src="./164376.jpg" />
+            <img src="./27490-800.jpg" />
+            <img src="./reaVPYbHtVWG8WHFPrgdvB.jpg" />
+          </div>
+        </div>
+        <div class="createdPost">
+          <div class="userPhotoAvatar">
+            <img
+              src="./mudrik-zb-1-min-1678873694cYyme.jpg"
+              width="40"
+              height="40"
+              class="rounded"
+            />
+          </div>
+          <div class="savedTitle">
+            <p>
+                Why Artemis 2 moon launch with astronauts is different from Artemis 1. Crew and experience adds a lot of change to the rocket hardware.
+            </p>
+
+          </div>
+          <div class="savedDescription">
+            <p>
+                Four astronauts will make a trip around the moon in 2024 or so. It's the first lunar trip by humans in half a century, and NASA wants to make sure its rocket is ready.
+
+                The agency's Space Launch System (SLS) rocket tasked with the historic launch has already flown once. It successfully sent Artemis 1, an uncrewed spacecraft with three mannequins on board, around the moon in 2022. Now it has a more sensitive mission of making sure the four Artemis 2 astronauts remain safe on board through the stresses of launch.
+            </p>
+          </div>
+          <div class="imageContainer">
+            <img
+              src="./HD-wallpaper-cute-astronaut-astronaut-beautiful-spacenight-thumbnail.jpg"
+            />
+            <img src="./149607.jpg" />
+            <img src="./164376.jpg" />
+            <img src="./27490-800.jpg" />
+            <img src="./reaVPYbHtVWG8WHFPrgdvB.jpg" />
+          </div>
+        </div>
+        <div class="createdPost">
+          <div class="userPhotoAvatar">
+            <img
+              src="./mudrik-zb-1-min-1678873694cYyme.jpg"
+              width="40"
+              height="40"
+              class="rounded"
+            />
+          </div>
+          <div class="savedTitle">
+            <p>
+                Why Artemis 2 moon launch with astronauts is different from Artemis 1. Crew and experience adds a lot of change to the rocket hardware.
+            </p>
+
+          </div>
+          <div class="savedDescription">
+            <p>
+                Four astronauts will make a trip around the moon in 2024 or so. It's the first lunar trip by humans in half a century, and NASA wants to make sure its rocket is ready.
+
+                The agency's Space Launch System (SLS) rocket tasked with the historic launch has already flown once. It successfully sent Artemis 1, an uncrewed spacecraft with three mannequins on board, around the moon in 2022. Now it has a more sensitive mission of making sure the four Artemis 2 astronauts remain safe on board through the stresses of launch.
+            </p>
+          </div>
+          <div class="imageContainer">
+            <img
+              src="./HD-wallpaper-cute-astronaut-astronaut-beautiful-spacenight-thumbnail.jpg"
+            />
+            <img src="./149607.jpg" />
+            <img src="./164376.jpg" />
+            <img src="./27490-800.jpg" />
+            <img src="./reaVPYbHtVWG8WHFPrgdvB.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
